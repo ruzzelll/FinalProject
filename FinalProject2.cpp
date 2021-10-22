@@ -2,7 +2,7 @@
 #include <iostream>
 #include <string>
 #include <cstdlib>
-#include<windows.h>
+
 
 using namespace std;
 
@@ -85,7 +85,7 @@ void draw() {
 int main()
 {
    
-    int s, x;
+    int s;
     char back;
     Diseases obj;
     while (running) {
