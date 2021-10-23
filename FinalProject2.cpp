@@ -5,18 +5,18 @@
 
 
 using namespace std;
-
+bool crun = true;
 bool running = true;
 class Diseases {
     public:
         string type;
-        string treatment;
         string desc;
+        string treatment;
         void d001() {
             Diseases d001;
             d001.type = "\t\t\t\t\tAbdominal aortic aneurysm";
-            d001.desc = "An abdominal aortic aneurysm (AAA) is a swelling (aneurysm) of the aorta \- the main blood vessel that leads- \naway from the heart, down through the abdomen to the rest of the body.";
-            d001.treatment = "Surgery: \tReplacing the weakened section of the blood vessel with a piece of synthetic tubing.\nMedications: \tBeta blockers, Angiotensin II receptor blockers, Statins";
+            d001.desc = "An abdominal aortic aneurysm (AAA) is a swelling (aneurysm) of the aorta \- the main blood vessel\nthat leads away from the heart, down through the abdomen to the rest of the body.";
+            d001.treatment = "Surgery: \tReplacing the weakened section of the blood vessel with a piece of synthetic tubing.\n\nMedications: \tBeta blockers, Angiotensin II receptor blockers, Statins";
             system("cls");
             cout << "****************************************************************************************************\n";
             cout << d001.type;
@@ -25,9 +25,9 @@ class Diseases {
         }
         void d002() {
             Diseases d002;
-            d002.type = "\t\t\t\t\tAcne";
+            d002.type = "\t\t\t\t\t\tAcne";
             d002.desc = "Acne is a common skin condition that affects most people at some point. It causes spots, oily-\nskin and sometimes skin that's hot or painful to touch.\n";
-            d002.treatment = "Medications: \tTopical retinoids, topical antibiotics, azelaic acid, antibiotic tablets, and isotretinoin tablets";
+            d002.treatment = "Medications: \tTopical retinoids, topical antibiotics, azelaic acid, antibiotic tablets,\n\t\tand isotretinoin tablets.";
             system("cls");
             cout << "****************************************************************************************************\n";
             cout << d002.type;
@@ -49,7 +49,7 @@ class Diseases {
             Diseases d004;
             d004.type = "\t\t\t\t\tAlcohol-related liver disease";
             d004.desc = "Alcohol-related liver disease (ARLD) refers to liver damage caused by excess alcohol intake.\nThere are several stages of severity and a range of associated symptoms including: feeling sick\nweight loss, loss of appetite, confusion or drowsiness, and vomiting blood.";
-            d004.treatment = "Treatment: \tThere's currently no specific medical treatment for ARLD. The main treatment\n\t\tis to stop drinking, preferably for the rest of your life. This reduces the risk of\n\t\tfurther damage to your liver and gives it the best chance of recovering.";
+            d004.treatment = "Treatment: \tThere's currently no specific medical treatment for ARLD. The main treatment\n\t\tis to stop drinking, preferably for the rest of your life. This reduces the risk\n\t\tof further damage to your liver and gives it the best chance of recovering.";
             system("cls");
             cout << "****************************************************************************************************\n";
             cout << d004.type;
@@ -58,9 +58,9 @@ class Diseases {
         }
         void d005() {
             Diseases d005;
-            d005.type = "\t\t\t\t\tAnxiety";
+            d005.type = "\t\t\t\t\t\tAnxiety";
             d005.desc = "Anxiety is a feeling of unease, such as worry or fear, that can be mild or severe. Anxiety is the\nmain symptom of several conditions, including panic disorder, phobias, post-traumatic stress\ndisorder and social anxiety disorder (social phobia).";
-            d005.treatment = "Initial Treatment: \tA.) Cognitive behavioural therapy - CBT helps you to understand how your problems,\n\t\t\tthoughts, feelings and behaviour affect each other. It can also help you to\n\t\t\tquestion your negative and anxious thoughts, and do things you would usually avoid\n\t\t\tbecause they make you anxious.\n\n\t\t\tB.) Applied relaxation - an alternative type of psychological treatment that can be\n\t\t\tas effective as CBT in treating GAD. Applied relaxation focuses on relaxing your muscles \n\t\t\tin a particular way during situations that usually cause anxiety.\n\nMedications: \tYou may be prescribed with the following medications: selective serotonin reuptake inhibitors (SSRIs),\n\t\tserotonin and noradrenaline reuptake inhibitors (SNRIs), and pregabalin benzodiazepines.";
+            d005.treatment = "Initial Treatment: \tA.) Cognitive behavioural therapy - CBT helps you to understand how your\n\t\t\tproblems, thoughts, feelings and behaviour affect each other. It can also\n\t\t\thelp you to question your negative and anxious thoughts, and do things you\n\t\t\twould usually avoid because they make you anxious.\n\n\t\t\tB.) Applied relaxation - an alternative type of psychological treatment\n\t\t\tthat can be as effective as CBT in treating GAD. Applied relaxation focuses\n\t\t\ton relaxing your muscles in a particular way during situations that\n\t\t\tusually cause anxiety.\n\nMedications: \t\tYou may be prescribed with the following medications: selective serotonin-\n\t\t\treuptake inhibitors (SSRIs), serotonin and noradrenaline reuptake inhibitors\n\t\t\t(SNRIs), and pregabalin benzodiazepines.";
             system("cls");
             cout << "****************************************************************************************************\n";
             cout << d005.type;
@@ -69,10 +69,10 @@ class Diseases {
         }
 
 };
-
+//Diseases list
 void draw() {
     cout << "**************************************************\n";
-    cout << "\t\tCommon Diseases A-Z\n";
+    cout << "\t\tCommon Diseases Index\n";
     cout << "**************************************************\n\n";
     cout << "1. Abdominal aortic aneurysm\n";
     cout << "2. Acne\n";
@@ -81,113 +81,199 @@ void draw() {
     cout << "5. Anxiety\n";
 
 }
+//Main menu
+void menu() {
+
+    cout << "--------------------------------------------------\n";
+    cout << "\t\tCommon Diseases Index\n";
+    cout << "--------------------------------------------------\n\n";
+
+    cout << "[1] Open index";
+    cout << "\n[2] Project info";
+    cout << "\n[3] Exit program\n";
+
+
+}
+//Group members info
+void info() {
+    cout << "--------------------------------------------------\n";
+    cout << "\t\tGroup Members\n";
+    cout << "--------------------------------------------------\n\n";
+    
+    cout << "1.) Noah Macaldo\n" << "2.) Manny Pacquiao\n" << "3.) Bong Go\n" << "4.) Rodrigo Roronoa Zoro\n" << "5.) Bong Revilla\n";
+
+}
 
 int main()
 {
-   
+    int c;
     int s;
     char back;
     Diseases obj;
     while (running) {
-        
-        draw();
-        cout << "\nSelect number: ";
 
-        //Selection validation
-        while (!(cin >> s)) {
-            //input choices
+        menu();
+
+        cout << "\n";
+
+        cout << "Enter a command [1-3]: ";
+        cin >> c;
+
+        //Input validation for integer
+        while (!((c == 1) || (c == 2) || (c == 3))) {
             system("cls");
-            draw();
-            cout << "\nPlease enter a valid input: ";
+            menu();
+            cout << "\n\aPlease enter a valid input: ";
             cin.clear();
             cin.ignore(123, '\n');
+            cin >> c;
         }
-        
-        while (s >= 1 && s <= 100) {
-            switch (s) {
-            case 1:
-                obj.d001();
-                cout << "\n\nBack?(y): ";
-                cin >> back;
 
-                while (!((back == 'y') || (back == 'Y'))) {
-                    system("cls");
-                    obj.d001();
-                    cout << "\n\nWrong input, enter (y) to return: ";
-                    cin.clear();
-                    cin.ignore(132, '\n');
-                    cin >> back;
-                }
-                if (back == 'y' || back == 'Y') {
-                    break;
-                }
-            case 2:
-                obj.d002();
-                cout << "\n\nBack?(y): ";
-                cin >> back;
-
-                while (!((back == 'y') || (back == 'Y'))) {
-                    system("cls");
-                    obj.d002();
-                    cout << "\n\nWrong input, enter (y) to return: ";
-                    cin.clear();
-                    cin.ignore(132, '\n');
-                    cin >> back;
-                }
-                if (back == 'y' || back == 'Y') {
-                    break;
-                }
-            case 3:
-                obj.d003();
-                cout << "\n\nBack?(y): ";
-                cin >> back;
-
-                while (!((back == 'y') || (back == 'Y'))) {
-                    system("cls");
-                    obj.d003();
-                    cout << "\n\nWrong input, enter (y) to return: ";
-                    cin.clear();
-                    cin.ignore(132, '\n');
-                    cin >> back;
-                }
-                if (back == 'y' || back == 'Y') {
-                    break;
-                }
-            case 4:
-                obj.d004();
-                cout << "\n\nBack?(y): ";
-                cin >> back;
-
-                while (!((back == 'y') || (back == 'Y'))) {
-                    system("cls");
-                    obj.d004();
-                    cout << "\n\nWrong input, enter (y) to return: ";
-                    cin.clear();
-                    cin.ignore(132, '\n');
-                    cin >> back;
-                }
-                if (back == 'y' || back == 'Y') {
-                    break;
-                }
-            case 5:
-                obj.d005();
-                cout << "\n\nBack?(y): ";
-                cin >> back;
-
-                while (!((back == 'y') || (back == 'Y'))) {
-                    system("cls");
-                    obj.d005();
-                    cout << "\n\nWrong input, enter (y) to return: ";
-                    cin.clear();
-                    cin.ignore(132, '\n');
-                    cin >> back;
-                }
-                if (back == 'y' || back == 'Y') {
-                    break;
-                }
-            }
+        switch (c) {
+        case 1:
             system("cls");
-            break;
+            while (crun) {
+                draw();
+                cout << "\nEnter (0) to return to main menu.";
+                cout << "\nSelect number: ";
+
+                //Input validation for integer
+                while (!(cin >> s)) {
+                    system("cls");
+                    draw();
+                    cout << "\nEnter (0) to return to main menu.";
+                    cout << "\n\aPlease enter a valid input: ";
+                    cin.clear();
+                    cin.ignore(123, '\n');
+                }            
+
+                while (s < 0 || s > 100) {
+                    system("cls");
+                    draw();
+                    cout << "\nEnter (0) to return to main menu.";
+                    cout << "\n\aPlease enter a valid input: ";
+                    cin.clear();
+                    cin.ignore(123, '\n');
+                    cin >> s;
+                }
+
+                if (s == 0) {
+                    system("cls");
+                    break;
+                }
+
+                while (s >= 0 && s <= 100) {
+                    switch (s) {
+                    case 1:
+                        obj.d001();
+                        cout << "\n\nBack?(y): ";
+                        cin >> back;
+
+                        while (!((back == 'y') || (back == 'Y'))) {
+                            system("cls");
+                            obj.d001();
+                            cout << "\n\n\aWrong input, enter (y) to return: ";
+                            cin.clear();
+                            cin.ignore(132, '\n');
+                            cin >> back;
+                        }
+                        if (back == 'y' || back == 'Y') {
+                            break;
+                        }
+                    case 2:
+                        obj.d002();
+                        cout << "\n\nBack?(y): ";
+                        cin >> back;
+
+                        while (!((back == 'y') || (back == 'Y'))) {
+                            system("cls");
+                            obj.d002();
+                            cout << "\n\n\aWrong input, enter (y) to return: ";
+                            cin.clear();
+                            cin.ignore(132, '\n');
+                            cin >> back;
+                        }
+                        if (back == 'y' || back == 'Y') {
+                            break;
+                        }
+                    case 3:
+                        obj.d003();
+                        cout << "\n\nBack?(y): ";
+                        cin >> back;
+
+                        while (!((back == 'y') || (back == 'Y'))) {
+                            system("cls");
+                            obj.d003();
+                            cout << "\n\n\aWrong input, enter (y) to return: ";
+                            cin.clear();
+                            cin.ignore(132, '\n');
+                            cin >> back;
+                        }
+                        if (back == 'y' || back == 'Y') {
+                            break;
+                        }
+                    case 4:
+                        obj.d004();
+                        cout << "\n\nBack?(y): ";
+                        cin >> back;
+
+                        while (!((back == 'y') || (back == 'Y'))) {
+                            system("cls");
+                            obj.d004();
+                            cout << "\n\n\aWrong input, enter (y) to return: ";
+                            cin.clear();
+                            cin.ignore(132, '\n');
+                            cin >> back;
+                        }
+                        if (back == 'y' || back == 'Y') {
+                            break;
+                        }
+                    case 5:
+                        obj.d005();
+                        cout << "\n\nBack?(y): ";
+                        cin >> back;
+
+                        while (!((back == 'y') || (back == 'Y'))) {
+                            system("cls");
+                            obj.d005();
+                            cout << "\n\n\aWrong input, enter (y) to return: ";
+                            cin.clear();
+                            cin.ignore(132, '\n');
+                            cin >> back;
+                        }
+                        if (back == 'y' || back == 'Y') {
+                            break;
+                        }
+                    }
+                    system("cls");
+                    break;
+                    
+                }
+                
+            }
+            break; 
+        case 2:
+            system("cls");
+            info();
+            
+            cout << "\n\nBack?(y): ";
+            cin >> back;
+            while (!((back == 'y') || (back == 'Y'))) {
+                system("cls");
+                info();
+                cout << "\n\n\aWrong input, enter (y) to return: ";
+                cin.clear();
+                cin.ignore(132, '\n');
+                cin >> back;
+            }
+            if (back == 'y' || back == 'Y') {
+                system("cls");
+                break;
+            }
+
+        case 3:
+
+            running = false;
         }
     }
 }
